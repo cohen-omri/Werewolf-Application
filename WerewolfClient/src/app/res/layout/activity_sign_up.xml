@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dGray"
+    android:orientation="vertical"
+    tools:context=".Activities.Signup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/darklogo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:fontFamily="@font/gagalin"
+            android:text="sign up"
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Username:"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/usernameEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="username"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="sans-serif-condensed"
+                android:textColorHint="@color/yellow"
+                android:textColor="@color/yellow"
+                android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Password:"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/passwordEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="password"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="sans-serif-condensed"
+                android:textColorHint="@color/yellow"
+                android:textColor="@color/yellow"
+                android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/cPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Confirm password:"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/cPasswordEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="password"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="sans-serif-condensed"
+                android:textColorHint="@color/yellow"
+                android:textColor="@color/yellow"
+                android:textSize="20dp"/>
+
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/yellow"
+            android:text="Sign Up"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/yellow"
+            android:text="Already Have an Account?"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/black"
+            android:onClick="logInClick"/>
+
+    </LinearLayout>
+
+</LinearLayout>

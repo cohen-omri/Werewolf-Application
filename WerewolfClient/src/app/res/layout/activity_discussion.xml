@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/dGray"
+    android:orientation="vertical"
+    tools:context=".Activities.Discussion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rules"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_qmark"
+                android:onClick="rulesClick" />
+
+            <!-- Add a spacer View to push the text -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/gagalin"
+                android:text="time"
+                android:textColor="@color/yellow"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/gagalin"
+            android:gravity="center"
+            android:text="Discussion"
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+
+
+    <GridLayout
+        android:id="@+id/infoGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:columnCount="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1.3"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Chat: "
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/chatEdt"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/yellow"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="text"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/sendMsgBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/background_spinner"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="✔"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/background_spinner"
+                android:padding="5dp"
+                android:fillViewport="true">
+
+                <TextView
+                    android:id="@+id/userListTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="user"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </ScrollView>
+
+            <Button
+                android:id="@+id/readyButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Ready"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:onClick="readyClick" />
+
+        </LinearLayout>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/topCardsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/topCard0"
+            android:tag="t 0"
+            android:layout_width="32dp"
+            android:layout_height="43.83dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/card_back"
+            android:scaleType="centerCrop"
+            android:onClick="cardClick"/>
+
+        <ImageView
+            android:id="@+id/topCard1"
+            android:tag="t 1"
+            android:layout_width="32dp"
+            android:layout_height="43.83dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/card_back"
+            android:scaleType="centerCrop"
+            android:onClick="cardClick"/>
+
+        <ImageView
+            android:id="@+id/topCard2"
+            android:tag="t 2"
+            android:layout_width="32dp"
+            android:layout_height="43.83dp"
+            android:layout_gravity="center"
+            android:src="@drawable/card_back"
+            android:scaleType="centerCrop"
+            android:onClick="cardClick"/>
+    </LinearLayout>
+
+    <!-- Vertical LinearLayout for the 3 rows -->
+    <LinearLayout
+        android:id="@+id/rows_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" />
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" />
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- User Card -->
+
+    <LinearLayout
+        android:id="@+id/userRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" />
+
+</LinearLayout>
